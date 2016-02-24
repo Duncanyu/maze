@@ -45,8 +45,29 @@
         <statement name="DO1">
           <block type="movement_forward" id="162"></block>
         </statement>
+        <value name="IF2">
+          <block type="logic_compare" id="169" inline="true">
+            <field name="OP">LT</field>
+            <value name="A">
+              <block type="sensor_object" id="170">
+                <field name="OBJECT">LEFTFRONT</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="math_number" id="171">
+                <field name="NUM">75</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO2">
+          <block type="movement_right" id="200"></block>
+        </statement>
       </block>
     </statement>
+    <next>
+      <block type="movement_stop" id="215"></block>
+    </next>
   </block>
   <block type="controls_whileUntil" id="1" inline="false" x="487" y="359">
     <field name="MODE">UNTIL</field>
