@@ -106,7 +106,4 @@
       <block type="movement_stop" id="215"></block>
     </next>
   </block>
-  <block type="math_number" id="412" x="218" y="552">
-    <field name="NUM">0</field>
-  </block>
 </xml>
