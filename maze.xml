@@ -8,7 +8,7 @@
     </value>
     <statement name="DO">
       <block type="controls_if" id="123" inline="false">
-        <mutation elseif="2"></mutation>
+        <mutation elseif="2" else="1"></mutation>
         <value name="IF0">
           <block type="logic_compare" id="142" inline="true">
             <field name="OP">LT</field>
@@ -62,6 +62,9 @@
         </value>
         <statement name="DO2">
           <block type="movement_right" id="200"></block>
+        </statement>
+        <statement name="ELSE">
+          <block type="movement_forward" id="231"></block>
         </statement>
       </block>
     </statement>
