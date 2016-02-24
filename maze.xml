@@ -1,5 +1,54 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="controls_whileUntil" id="1" inline="false" x="339" y="350">
+  <block type="controls_whileUntil" id="102" inline="false" x="67" y="354">
+    <field name="MODE">UNTIL</field>
+    <value name="NUMBER">
+      <block type="sensor_button" id="110">
+        <field name="OBJECT">UP</field>
+      </block>
+    </value>
+    <statement name="DO">
+      <block type="controls_if" id="123" inline="false">
+        <mutation elseif="2"></mutation>
+        <value name="IF0">
+          <block type="logic_compare" id="142" inline="true">
+            <field name="OP">LT</field>
+            <value name="A">
+              <block type="sensor_object" id="130">
+                <field name="OBJECT">LEFTSIDE</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="math_number" id="149">
+                <field name="NUM">75</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="movement_forward" id="71"></block>
+        </statement>
+        <value name="IF1">
+          <block type="logic_compare" id="150" inline="true">
+            <field name="OP">LT</field>
+            <value name="A">
+              <block type="sensor_object" id="151">
+                <field name="OBJECT">RIGHTSIDE</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="math_number" id="152">
+                <field name="NUM">75</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO1">
+          <block type="movement_forward" id="162"></block>
+        </statement>
+      </block>
+    </statement>
+  </block>
+  <block type="controls_whileUntil" id="1" inline="false" x="487" y="359">
     <field name="MODE">UNTIL</field>
     <value name="NUMBER">
       <block type="sensor_button" id="2">
