@@ -63,6 +63,24 @@
         <statement name="DO2">
           <block type="movement_right" id="200"></block>
         </statement>
+        <value name="IF3">
+          <block type="logic_compare" id="270" inline="true">
+            <field name="OP">LT</field>
+            <value name="A">
+              <block type="sensor_object" id="271">
+                <field name="OBJECT">RIGHTFRONT</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="math_number" id="272">
+                <field name="NUM">75</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO3">
+          <block type="movement_right" id="291"></block>
+        </statement>
         <statement name="ELSE">
           <block type="movement_forward" id="231"></block>
         </statement>
